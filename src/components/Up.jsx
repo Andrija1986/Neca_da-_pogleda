@@ -1,14 +1,11 @@
-
-import Card from './Card'
-import data from '../data/data';
+import Luis from '../pictures/luis.jpg';
+import BlockImage from "./BlockImage";
 
 const Up = () => {
   return (
-    <main>
       <div>
-        <Card key={data.id} src={data.img} />
+        <BlockImage imageSrc={Luis} />
       </div>
-    </main>
   )
 }
 

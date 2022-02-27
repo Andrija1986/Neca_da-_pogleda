@@ -1,15 +1,16 @@
 
 
 import data from '../data/data';
-
+import Patrick from '../pictures/patrick.jpg';
+import Card from "./Card";
 
 const MiddleSection = () => {
-  
 
-const card = data.map(item => <img key={item.id} src={item.image} alt= '' />)
+
+const card = data.map(item => <img className={'rows-name'} key={item.id} src={item.image} alt= '' />)
 console.log(data);
 
-  
+
   //const card = arr.map((item) => <img key={item.id} src={require(`${item.image}`)} alt= '' />)
 
 
@@ -19,7 +20,22 @@ console.log(data);
   return (
     <section>
       <div className='rows'>
-        {card}
+        {data.map(item => <Card key={item.id} item={item} />)}
+
+        {/*<div className='row-item'>*/}
+        {/*  <img*/}
+        {/*    src={Patrick}*/}
+        {/*    alt="candy1"*/}
+        {/*  />*/}
+        {/*  <h3>Lorem, ipsum</h3>*/}
+        {/*  <p>*/}
+        {/*    Lorem ipsum*/}
+        {/*    dolor sit amet consectetur adipisicing elit. Voluptatum, consectetur!*/}
+        {/*  </p>*/}
+        {/*  <span>Price:50$</span><br/>*/}
+        {/*  <button>Add to chart</button>*/}
+        {/*</div>*/}
+        {/*{card}*/}
       </div>
     </section>
   )
@@ -39,7 +55,7 @@ export default MiddleSection
 
 
 
-/* 
+/*
 import Patrick from '../pictures/patrick.jpg'
 import Karsten from '../pictures/karsten.jpg'
 import Glen from '../pictures/glen.jpg'
@@ -49,7 +65,7 @@ import Christopher from '../pictures/christopher.jpg'
 */
 
 
-/* 
+/*
       <div className="rows">
         <img
           src={Patrick}
@@ -63,7 +79,7 @@ import Christopher from '../pictures/christopher.jpg'
         <span>Price:50$</span><br/>
         <button>Add to chart</button>
       </div>
-      
+
       <div className="rows">
         <img
           src={Karsten}
@@ -77,7 +93,7 @@ import Christopher from '../pictures/christopher.jpg'
         <span>Price:50$</span><br/>
         <button>Add to chart</button>
       </div>
-      
+
       <div className="rows">
         <img
           src={Glen}
@@ -91,7 +107,7 @@ import Christopher from '../pictures/christopher.jpg'
         <span>Price:50$</span><br/>
         <button>Add to chart</button>
       </div>
-    
+
       <div className="rows">
         <img
           src={Deidre}
@@ -105,7 +121,7 @@ import Christopher from '../pictures/christopher.jpg'
         <span>Price:50$</span><br/>
         <button>Add to chart</button>
       </div>
-      
+
       <div className="rows">
         <img
           src={Dan}
@@ -119,7 +135,7 @@ import Christopher from '../pictures/christopher.jpg'
         <span>Price:50$</span><br/>
         <button>Add to chart</button>
       </div>
-      
+
       <div className="rows">
         <img
           src={Christopher}
